@@ -20,7 +20,19 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{dummy2025}
-A.~Author, ``A dummy reference for testing,'' \emph{IEEE Transactions on Signal Processing}, vol.~73, pp. 1--10, 2025.
+\bibitem{Garrido2018}
+M.~Garrido, S.-J. Huang, and S.-G. Chen, ``Feedforward fft hardware architectures based on rotator allocation,'' \emph{IEEE Transactions on Circuits and Systems I: Regular Papers}, vol.~65, no.~2, pp. 581--592, 2018.
+
+\bibitem{2014ISICGarrido}
+M.~Garrido, M.~Acevedo, A.~Ehliar, and O.~Gustafsson, ``Challenging the limits of fft performance on fpgas (invited paper),'' in \emph{2014 International Symposium on Integrated Circuits (ISIC)}, 2014, pp. 172--175.
+
+\bibitem{Glittas2016}
+A.~X. Glittas, M.~Sellathurai, and G.~Lakshminarayanan, ``A normal i/o order radix-2 fft architecture to process twin data streams for mimo,'' \emph{IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, vol.~24, no.~6, pp. 2402--2406, 2016.
+
+\bibitem{Garrido2021}
+M.~Garrido and P.~Malagón, ``The constant multiplier fft,'' \emph{IEEE Transactions on Circuits and Systems I: Regular Papers}, vol.~68, no.~1, pp. 322--335, 2021.
+
+\bibitem{Kaya2024}
+Z.~Kaya and M.~Garrido, ``Optimized 4-parallel 1024-point msc fft,'' \emph{IEEE Access}, vol.~12, pp. 84\,110--84\,121, 2024.
 
 \end{thebibliography}
