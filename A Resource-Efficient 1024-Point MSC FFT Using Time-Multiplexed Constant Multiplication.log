@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.5)  9 DEC 2025 16:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.5)  9 DEC 2025 17:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,30 +496,36 @@ Package hyperref Info: Link coloring OFF on input line 20.
 \@outlinefile=\write3
 \openout3 = `"A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.out"'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 63.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 65.
  (d:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 
-Overfull \hbox (2.74577pt too wide) in paragraph at lines 114--115
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (2.74577pt too wide) in paragraph at lines 118--119
  []|\OT1/ptm/m/n/8 Proposed| 
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.bbl
 
 [1{d:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-] (./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.bbl)
+])
 
 
 
@@ -534,18 +540,18 @@ Package rerunfilecheck Info: File `"A Resource-Efficient 1024-Point MSC FFT Usin
 (rerunfilecheck)             Checksum: E60457B0E429F62CA45F5E7A1B7F473A;1059.
  ) 
 Here is how much of TeX's memory you used:
- 15857 strings out of 467892
- 315247 string characters out of 5438323
- 729241 words of memory out of 5000000
- 44203 multiletter control sequences out of 15000+600000
+ 15858 strings out of 467892
+ 315269 string characters out of 5438323
+ 720241 words of memory out of 5000000
+ 44204 multiletter control sequences out of 15000+600000
  667033 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,80p,1315b,1030s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.pdf" (2 pages, 106900 bytes).
+ 75i,15n,80p,1414b,1175s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.pdf" (2 pages, 124402 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 145 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  17 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
