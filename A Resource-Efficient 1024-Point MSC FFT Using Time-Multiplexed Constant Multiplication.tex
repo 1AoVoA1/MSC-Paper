@@ -8,6 +8,7 @@
 \usepackage{stfloats}
 \usepackage{url}
 \usepackage{graphicx}
+\graphicspath{{figure/}} % 假设图片在 figures 文件夹
 \usepackage{cite}
 
 % 可根据需要添加其他宏包
@@ -19,7 +20,7 @@
 
 \begin{document}
 
-\title{A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication}
+\title{A Resource-Efficient 1024-Point Pipeliend MSC FFT Using Time-Multiplexed Constant Multiplication}
 
 \author{
     First A. Author,~\IEEEmembership{Member,~IEEE,}
@@ -28,7 +29,7 @@
 }
 
 \markboth{IEEE Transactions ON CIRCUITS AND SYSTEMS---II: EXPRESS BRIEFS,~Vol.~XX, No.~XX, Month~Year}%
-{Author \MakeLowercase{\textit{et al.}}: A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multipliers}
+{Author \MakeLowercase{\textit{et al.}}: A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication}
 
 
 \maketitle
@@ -44,21 +45,33 @@ FFT, constant multiplication, time-multiplexing, FPGA, ASIC, low-complexity, sig
 \section{Introduction}
 % Introduction content here
 
-\section{Background and Related Work}
-% Background and literature review here
+\section{Time-Multiplexed Constant Multiplication}
+\label{sec:TmCM}
 
-\section{Proposed Architecture}
-% Detailed description of your MSC FFT architecture
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\linewidth]{1024MSC.pdf}
+    \caption{abot}
+    \label{fig:new_1024MSC}
+\end{figure*}
 
-\section{Implementation and Optimization}
-% Hardware implementation details, time-multiplexing strategy, etc.
+\section{Proposed MSC Architecture}
+\label{sec:Proposed_arch}
+% 分为PE
+An resource-efficient 4-parallel 1024-point pipeliend MSC FFT architecture is proposed according to the method desribed in Section~\ref{sec:TmCM}. Fig.~\ref{fig:new_1024MSC} shows the overall architecture of the proposed design, which mainly consists of memory-based permutation module and two identical radix-$2^{5}$ modules.
+
+\subsection{Data Management}
+\subsection{Radix-$2^{5}$ Module}
+\subsection{optimization of Rotators}
+\subsection{Memory-based Permutation Circuit}
 
 \section{Experimental Results and Comparison}
+\label{sec:exp_results}
 % 该部分展示实验结果，包括资源利用率、SQNR、吞吐量等指标的比较
 
 To evaluate the efficacy of the proposed 4-parallel 1024-point MSC FFT architecture, we implemented it on a Xilinx Virtex 7 XC7VX330TFFG1157 FPGA platform and compared it against five state-of-the-art designs \cite{Garrido2018,2014ISICGarrido,Glittas2016,Garrido2021,Kaya2024}. 
 
-We employ the same FFT size, word length(WL) and degree of parallelism for a fair comparison, i.e., $N$ = 1024, $WL$ = 16bit and $P$ = 4. Table~\ref{implementation on fPGA} presents a detailed comparison of hardware resource utilization and performance characteristics between the proposed 4-parallel 1024-point MSC FFT architecture and contemporary designs. The key metrics include the number of slices, LUTs, flip-flops (FFs), DSPs, Block-RAMs, maximum clock frequency ($f_{\text{CLK}}$), throughput(Th.), latency (in cycles and microseconds), signal-to-quantization noise ratio (SQNR), power consumption (P), and normalized power (NP). All architectures listed in the table are implemented on either Virtex-6 (V6) or Virtex-7 (V7) FPGA platforms.
+We employ the same FFT size, word length(WL) and degree of parallelism for a fair comparison, i.e., $N$ = 1024, $WL$ = 16bit and $P$ = 4. Table~\ref{tab:implementation on fPGA} presents a detailed comparison of hardware resource utilization and performance characteristics between the proposed 4-parallel 1024-point MSC FFT architecture and contemporary designs. The key metrics include the number of slices, LUTs, flip-flops (FFs), DSPs, Block-RAMs, maximum clock frequency ($f_{\text{CLK}}$), throughput(Th.), latency (in cycles and microseconds), signal-to-quantization noise ratio (SQNR), power consumption (P), and normalized power (NP). All architectures listed in the table are implemented on either Virtex-6 (V6) or Virtex-7 (V7) FPGA platforms.
 
 In terms of hardware resources utilization, the proposed MSC architecture achieves competitive area efficiency. It utilizes only 12 DSPs and 4 BRAMs, significantly fewer than those required by previous MDC-based architectures.\cite{Garrido2018,2014ISICGarrido,Glittas2016}. Among recent high-radix FFT designs, the proposed MSC architecture achieves the lowest Slices count, reducing area by 8.5\% compared to the prior MSC implementation \cite{Kaya2024} and by 44\% relative to the CM-based design \cite{Garrido2021}.Although the LUTs count of proposed architecture is comparable to \cite{Kaya2024} , the proposed design reduces flip-flops usage by 17.3\%, indicating that the use of time-multiplexed constant multiplication contributes to a more resource-efficient implementation.
 
@@ -71,7 +84,7 @@ With respect to numerical accuracy, the SQNR of the proposed MSC FFT (49.46 dB) 
 \begin{table}[h]
 \centering
 \caption{Comparison of Hardware Resources and Performance for 4-Parallel 1024-Point Pipeliend FFT Implemented on FPGA}
-\label{implementation on fPGA}
+\label{tab:implementation on fPGA}
 % 缩小列间距（可选）
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.5} % 设置行高为默认的1.5倍
@@ -98,6 +111,7 @@ SQNR (dB) & 40.30 & - & - & - & 50.16 & 49.46 \\
 P (W) & - & - & - & 1.68 & 0.98 &  1.16\\
 NP ($\frac{\text{mW}}{\text{MHz}}$) & - & - & - & 2.47 & 2.33 &  2.35\\
 \bottomrule
+-:Not provided
 \end{tabular}
 \end{table} 
 
@@ -105,7 +119,7 @@ NP ($\frac{\text{mW}}{\text{MHz}}$) & - & - & - & 2.47 & 2.33 &  2.35\\
 \centering
 \caption{Comparison of Resource-Delay Product (RDP) and Power-Delay Product (PDP). PDP = $\text{Power} \cdot \text{T}_{\text{CLK}}$ ($m$W$ \cdot $ns)
 , RDP = $\text{Slices} \cdot \text{T}_{\text{CLK}}$ (slices $\cdot$ ns)}
-\label{resource_analysis}
+\label{tab:resource_analysis}
 % 缩小列间距（可选）
 \setlength{\tabcolsep}{3pt} % 减少默认列间距
 \renewcommand{\arraystretch}{1.5} % 设置行高为默认的1.5倍
@@ -123,6 +137,10 @@ PDP(mW$\cdot$ns) & - & - & - & 2470.61 & 2333.38 & 2352.94 \\
 RDP & 5612.69 & 5951.56 & - & 3869.15 & 3845.32 & \textbf{2995.94} \\
 \bottomrule
 \end{tabular}
+\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l@{}}
+\footnotesize -: Not provided \\
+\end{tabular*}
 \end{table}
 
 \section{Conclusion}

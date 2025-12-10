@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.5)  9 DEC 2025 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.5)  10 DEC 2025 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -428,7 +428,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count348
 \TX@ftn=\toks29
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 20.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 21.
  (d:/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
  (d:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -446,24 +446,24 @@ LaTeX Warning: Unused global option(s):
 (./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.aux)
 \openout1 = `"A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 -- Lines per column: 58 (exact).
 Package caption Info: Begin \AtBeginDocument code.
@@ -490,12 +490,17 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (d:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 20.
-Package hyperref Info: Link coloring OFF on input line 20.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 21.
+Package hyperref Info: Link coloring OFF on input line 21.
  (./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.out) (./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.out)
 \@outlinefile=\write3
 \openout3 = `"A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.out"'.
 
+<figure/1024MSC.pdf, id=44, 1565.12733pt x 624.53326pt>
+File: figure/1024MSC.pdf Graphic file (type pdf)
+<use figure/1024MSC.pdf>
+Package pdftex.def Info: figure/1024MSC.pdf  used on input line 53.
+(pdftex.def)             Requested size: 516.0pt x 205.90602pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -504,8 +509,20 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 65.
- (d:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 78.
+(d:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
@@ -513,8 +530,13 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (2.74577pt too wide) in paragraph at lines 118--119
+Overfull \hbox (2.74577pt too wide) in paragraph at lines 132--133
  []|\OT1/ptm/m/n/8 Proposed| 
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 141--143
+[] 
  []
 
 
@@ -525,33 +547,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1{d:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-])
+]
 
+)
 
-
-[2
-
-] (./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.aux)
+[2 <./figure/1024MSC.pdf>] (./A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.aux)
  ***********
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
  ***********
 Package rerunfilecheck Info: File `"A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication".out' has not changed.
-(rerunfilecheck)             Checksum: E60457B0E429F62CA45F5E7A1B7F473A;1059.
+(rerunfilecheck)             Checksum: D9F6DFB9063DFB52414B6EEEA6DB3A90;1617.
  ) 
 Here is how much of TeX's memory you used:
- 15858 strings out of 467892
- 315269 string characters out of 5438323
- 720241 words of memory out of 5000000
- 44204 multiletter control sequences out of 15000+600000
- 667033 words of font info for 114 fonts, out of 8000000 for 9000
+ 15884 strings out of 467892
+ 315820 string characters out of 5438323
+ 719454 words of memory out of 5000000
+ 44225 multiletter control sequences out of 15000+600000
+ 668169 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,80p,1414b,1175s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.pdf" (2 pages, 124402 bytes).
+ 75i,15n,80p,1414b,1178s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "A Resource-Efficient 1024-Point MSC FFT Using Time-Multiplexed Constant Multiplication.pdf" (2 pages, 171104 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
