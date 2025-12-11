@@ -17,6 +17,8 @@
 \usepackage{siunitx}
 \usepackage{hyperref}
 \usepackage{tabularx}
+\usepackage{adjustbox} % 添加到导言区
+\usepackage{relsize} % 在导言区添加
 
 \begin{document}
 
@@ -48,21 +50,65 @@ FFT, constant multiplication, time-multiplexing, FPGA, ASIC, low-complexity, sig
 \section{Time-Multiplexed Constant Multiplication}
 \label{sec:TmCM}
 
-\begin{figure*}[t]
-    \centering
-    \includegraphics[width=\linewidth]{1024MSC.pdf}
-    \caption{abot}
-    \label{fig:new_1024MSC}
-\end{figure*}
+
 
 \section{Proposed MSC Architecture}
 \label{sec:Proposed_arch}
 % 分为PE
 An resource-efficient 4-parallel 1024-point pipeliend MSC FFT architecture is proposed according to the method desribed in Section~\ref{sec:TmCM}. Fig.~\ref{fig:new_1024MSC} shows the overall architecture of the proposed design, which mainly consists of memory-based permutation module and two identical radix-$2^{5}$ modules.
 
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{1024MSC.pdf}
+    \caption{Overview of the proposed 4-parallel 1024-point pipeliend MSC FFT architecture.}
+    \label{fig:new_1024MSC}
+\end{figure*}
+
 \subsection{Data Management}
+
 \subsection{Radix-$2^{5}$ Module}
-\subsection{optimization of Rotators}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[height=3cm]{PE.pdf}
+    \caption{Fullly real processing element.}
+    \label{fig:PE}
+\end{figure}
+\subsection{Optimization of Rotators}
+
+\begin{table}[htbp]
+\centering
+\caption{Time diagram of twiddle factors in Radix-$2^{5}$ module.}
+\label{tab:TW}
+\renewcommand{\arraystretch}{1.2} % 1.0 是默认值，1.2~1.5 常用于增加行距
+\setlength{\tabcolsep}{1.2pt} % 调整列间距
+\begin{tabular}{lcccc}
+\toprule
+$T$ & TW10 & TW11 & TW12 & TW13 \\
+\midrule
+0 & $1$ & ${\scriptstyle  0.9239 - 0.3827i}$ & ${\scriptstyle  0.9808 - 0.1951i}$ & ${\scriptstyle  0.8315 - 0.5556i}$ \\
+1 & $1$ & ${\scriptstyle  0.9239 - 0.3827i}$ & ${\scriptstyle  0.9808 - 0.1951i}$ & ${\scriptstyle  0.8315 - 0.5556i}$ \\
+2 & ${\scriptstyle  0.7071 - 0.7071i}$ & ${\scriptstyle  0.3827 - 0.9239i}$ & ${\scriptstyle  0.5556 - 0.8315i}$ & ${\scriptstyle  0.1951 - 0.9808i}$ \\
+3 & ${\scriptstyle  0.7071 - 0.7071i}$ & ${\scriptstyle  0.3827 - 0.9239i}$ & ${\scriptstyle  0.5556 - 0.8315i}$ & ${\scriptstyle  0.1951 - 0.9808i}$ \\
+4 & $-i$ & ${\scriptstyle  -0.3827 - 0.9239i}$ & ${\scriptstyle  -0.1951 - 0.9808i}$ & ${\scriptstyle  -0.5556 - 0.8315i}$ \\
+5 & $-i$ & ${\scriptstyle  -0.3827 - 0.9239i}$ & ${\scriptstyle  -0.1951 - 0.9808i}$ & ${\scriptstyle  -0.5556 - 0.8315i}$ \\
+6 & ${\scriptstyle  -0.7071 - 0.7071i}$ & ${\scriptstyle  -0.9239 - 0.3827i}$ & ${\scriptstyle  -0.8315 - 0.5556i}$ & ${\scriptstyle  -0.9808 - 0.1951i}$ \\
+7 & ${\scriptstyle  -0.7071 - 0.7071i}$ & ${\scriptstyle  -0.9239 - 0.3827i}$ & ${\scriptstyle  -0.8315 - 0.5556i}$ & ${\scriptstyle  -0.9808 - 0.1951i}$ \\
+\midrule
+$T$ & TW20 & TW21 & TW22 & TW23 \\
+\midrule
+0 & $1$ & ${\scriptstyle  0.7071 - 0.7071i}$ & ${\scriptstyle  0.9239 - 0.3827i}$ & ${\scriptstyle  0.3827 - 0.9239i}$ \\
+1 & $1$ & ${\scriptstyle  0.7071 - 0.7071i}$ & ${\scriptstyle  0.9239 - 0.3827i}$ & ${\scriptstyle  0.3827 - 0.9239i}$ \\
+2 & $-i$ & ${\scriptstyle  -0.7071 - 0.7071i}$ & ${\scriptstyle  -0.3827 - 0.9239i}$ & ${\scriptstyle  -0.9239 - 0.3827i}$ \\
+3 & $-i$ & ${\scriptstyle  -0.7071 - 0.7071i}$ & ${\scriptstyle  -0.3827 - 0.9239i}$ & ${\scriptstyle  -0.9239 - 0.3827i}$ \\
+\midrule
+$T$ & TW30 & TW31 & TW32 & TW33 \\
+\midrule
+0 & $1$ & $-i$ & ${\scriptstyle  0.7071 - 0.7071i}$ & ${\scriptstyle  -0.7071 - 0.7071i}$ \\
+1 & $1$ & $-i$ & ${\scriptstyle  0.7071 - 0.7071i}$ & ${\scriptstyle  -0.7071 - 0.7071i}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Memory-based Permutation Circuit}
 
 \section{Experimental Results and Comparison}
@@ -81,7 +127,7 @@ To further quantify the trade-offs between hardware cost, speed, and energy effi
 
 With respect to numerical accuracy, the SQNR of the proposed MSC FFT (49.46 dB) is comparable to that of \cite{Kaya2024} (50.16 dB), differing by less than 1 dB, yet considerably higher than the 40.30 dB reported in \cite{Garrido2018}. This demonstrates that the time-multiplexed constant multiplication strategy employed in the MSC architecture effectively preserve signal fidelity despite resource reduction.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Comparison of Hardware Resources and Performance for 4-Parallel 1024-Point Pipeliend FFT Implemented on FPGA}
 \label{tab:implementation on fPGA}
@@ -115,7 +161,7 @@ NP ($\frac{\text{mW}}{\text{MHz}}$) & - & - & - & 2.47 & 2.33 &  2.35\\
 \end{tabular}
 \end{table} 
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Comparison of Resource-Delay Product (RDP) and Power-Delay Product (PDP). PDP = $\text{Power} \cdot \text{T}_{\text{CLK}}$ ($m$W$ \cdot $ns)
 , RDP = $\text{Slices} \cdot \text{T}_{\text{CLK}}$ (slices $\cdot$ ns)}
